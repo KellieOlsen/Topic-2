@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Exfive {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String day = null;
+		String nextday = null;
+		
+		System.out.print("Enter today's day: ");
+		int today = input.nextInt();
+		System.out.print("Enter the number of days elapsed from today: ");
+		int days = input.nextInt();
+		
+		if (today == 0) day = "Sunday";
+		else if (today == 1) day = "Monday";
+		else if (today == 2) day = "Tuesday";
+		else if (today == 3) day = "Wednesday";
+		else if (today == 4) day = "Thursday";
+		else if (today == 5) day = "Friday";
+		else if (today == 6) day = "Saturday";
+		
+		int futureday = (today + days) % 7;
+		
+		if (futureday == 0) nextday = "Sunday";
+		else if (futureday== 1) nextday = "Monday";
+		else if (futureday == 2) nextday = "Tuesday";
+		else if (futureday == 3) nextday = "Wednesday";
+		else if (futureday == 4) nextday = "Thursday";
+		else if (futureday == 5) nextday = "Friday";
+		else if (futureday == 6) nextday = "Saturday";		
+		System.out.print("Today is " + day + " and the future day is " + nextday + ".");
+		
+		
+			}
+
+}
